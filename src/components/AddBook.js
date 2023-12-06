@@ -10,7 +10,7 @@ import {
   import axios from "axios";
   import React, { useState } from "react";
   import { useNavigate } from "react-router-dom";
-  const baseurl="https://mernbackend-3jen.onrender.com";
+  // const baseurl="https://mernbackend-3jen.onrender.com";
   
   const AddBook = () => {
     const history = useNavigate();
@@ -33,8 +33,8 @@ import {
   
     const sendRequest = async () => {
       await axios
-        // .post("http://localhost:5000/books", {
-        .post(baseurl, {
+        .post("http://localhost:5000/books", {
+        // .post(baseurl, {
           name: String(inputs.name),
           author: String(inputs.author),
           description: String(inputs.description),
